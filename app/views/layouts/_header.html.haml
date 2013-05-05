@@ -1,0 +1,18 @@
+- # Header Part
+.header
+  .container
+    .row
+      .span5= image_tag('logo.png')
+      .span14.menu
+        %ul
+          %a.active(href="")
+            %li Help
+          %a(href="")
+            %li Terms & Conditions
+          %a(href="")
+            %li About
+          %a(href="")
+            %li Contact us
+      .span5.menu1
+        = link_to "Sign in", "#", html_options = {class: "nbtn pull-right sign_in"}
+        = link_to "Register", "#", html_options = {class: "nbtn pull-right"}
