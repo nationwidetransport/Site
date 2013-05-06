@@ -10,7 +10,7 @@ body{
    font-size:12px;
    background:#FAFAFA;
    color:#707070;
-   font-family:Helvetica Neue;
+   font-family:arial;
    background-image:url('body_bg.jpg')
 }
 
@@ -99,15 +99,70 @@ a:hover{color:#4093F0;text-decoration:none;}
 
 .content{
    hr{
-      border-bottom:1px dashed #ccc;    
+      border-bottom:1px dashed #A9AEB4;    
       border-top:0px;
       border-right:0px;
       border-left:0px;
+      margin:50px 0;
    }
 
-   h4{
+   .title1{
       text-align:center;
+      color:#3F4650;
+      font-weight:bolder;
+      font-size:26px;
    }
+
+   .title2{
+      color:#3F4650;
+      font-weight:bolder;
+      font-size:15px;
+      margin-bottom:5px;
+   }
+
+   .text1{
+      color:#666;
+      font-size:15px;      
+      margin-top:20px;
+      text-align:center;
+      line-height:22px;
+      letter-spacing:.1em;
+   }
+
+   .text2{
+      color:#666;
+      font-size:15px;
+      line-height:22px; 
+   }
+
+   .learn{
+      text-transform:uppercase;
+      text-align:center;
+      margin-top:20px;
+      font-size:15px;
+      [class^="icon-"]{
+         margin-right:5px;
+      }
+   }
+
+   .home_sign_up{
+      background-color:#434B56;
+      height:45px;
+      padding:20px 0;
+      @include border-radius(7px);
+      .text{
+         color:#fff;
+         padding:10px;
+         font-size:18px;
+      }
+      input[type="text"], input[type="email"]{
+         background-color:#798088;
+         border:#383F47 1px solid;
+         padding:10px;
+         color:#fff;
+      }
+
+   }   
 }
 
 .link{

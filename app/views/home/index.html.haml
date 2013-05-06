@@ -1,8 +1,45 @@
 .banner
-  
+  = image_tag('banner.png')
 .content
   .container
     %hr
-    %h4 We are the leading car agency with 300,000 Happy Customers.
+    .title1 We are the leading car agency with 300,000 Happy Customers.
+    .text1 
+      Morbi orci ante, consectetur id vestibulum quis, suscipit eu eros. Duis non egestas dolor. Duis non volutpat leo. Aliquam nisi eros, accumsan 
+      %br
+      non gravida vitae, ultricces eu eros. phasellus sagittis mattis tristique
+    .learn  
+      .icon-circle-arrow-right
+      Learn More
     %hr
-
+    .row
+      .span7
+        .title2
+          .icon-cog
+          Dedicatted customer support
+        .text2
+          Praesent tempus egestas blandit. Nunc euismod volutpat ultrices. Nam fermentum nibh eget mi vehicula dictum.
+      .span7.offset1
+        .title2
+          .icon-tag
+          Special low rates on car booking
+        .text2
+          Nunc ut nibh, id dapibus quam. mauris id est at diam rutrum ultricies. Vivamus et dolor valit. Nam congue blandit nulla sed tincidunt.
+      .span7.offset1
+        .title2
+          .icon-edit
+          Manage your booking online
+        .text2
+          Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et malesuada fames ac turpis egestas
+    %hr
+    
+    .home_sign_up
+      .span10
+        .text Signup for our email to celebrate great specials
+      .span5
+        %input(type="text" placeholder="Name")
+      .span5
+        %input(type="email" placeholder="Email")
+      .span3
+        .btn.btn-large.btn-warning SIGN UP
+        
