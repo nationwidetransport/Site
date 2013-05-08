@@ -105,47 +105,52 @@ a:hover{color:#4093F0;text-decoration:none;}
   @include border-radius(3px);
   border:1px solid #ccc;
   margin-top:60px;
-   .tabs{
-      .tab{
-         width:50%;
-         text-align:center;
-         float:left;
-         font-size:15px;
-         font-weight:bold;
-      }
-   }
+  ul{
+     li{
+        font-size:15px;
+        font-weight:bold;
+        text-align:center;
+        @include border-radius(0px);
+        border:0px;
+        width:50%;        
+        a, a:hover{
+           background:#eee;
+           color:#999;
+           margin:0px;
+           padding-top:10px;
+           padding-bottom:10px;
+           border-bottom:4px solid #eee;
+        }
+     }
 
-   .active{
-      .tab{
-         background-color:#fff;
-         border-top:5px solid #ED7B35;
-         color:#666;
-         padding:10px 0;
-      }      
-   }
-
-   .in-active{
-      cursor:pointer;
-      .tab {
-         background-color:#EEEEEE;         
-         border-bottom:1px solid #ccc;
-         color:#ccc;
-         .tab1{border-right:1px solid #ccc;padding:10px 0;}         
-         .tab2{border-left:1px solid #ccc;padding:10px 0;}
-      }
-   }
+     .active > a, .active > a:hover{
+        @include border-radius(0px);
+        background:#fff;
+        border-top:5px solid #ED7B35;
+        
+     }
+  }
    
-   .tab-content1{
-      margin-top:20px;
+   .tab-content{
       padding-left:7px;
+      overflow:visible;
       label{
          text-transform:uppercase;
          font-size:12px;
       }
+
+      .return{
+         font-size:14px;
+         color:#666;
+         padding-top:5px;
+         margin-left:5px;
+      }
+
       input[type="text"], input[type="checkbox"], select{
          background-color:#F9F9F9;
          padding:10px;
          height:25px;
+         margin-top:0px;
       }
 
       select{

@@ -1,49 +1,45 @@
 .banner
   .container
     .booking.pull-right.span10
-      .tabs.active
-        .tab(one=".tab-content1" two =".tab-content2")
-          .tab1 Book a car
-      .tabs.in-active
-        .tab(one=".tab-content2" two =".tab-content1")
-          .tab2 Manage Reservation
-      .span10.tab-content1
-        .row
-          .span5
-            %label Location
-          .span4.tright.link
-            = link_to "Airport codes", ""
-        .row
-          .span10
-            %input(type="text" class="span9" placeholder="Enter Airport, City or zipcode")
-        .row
-          .span9
-            %input(type="checkbox")
-              Return at different location
-          .span9(style="margin-top:15px;")
-            .row
-              .span5
-                %label Pick-up date
-              .span4
-                %label Drop-off date
-          .span9
-            .row
-              .span5
-                %input(type="text" class="date" placeholder="20/12/2013")
-                %input(type="text" class="time" placeholder="10:00")
-              .span4
-                %input(type="text" class="date" placeholder="20/12/2013")
-                %input(type="text" class="time" placeholder="10:00")
-          .span9(style="margin-top:15px;")
-            %label Car type
-          .span9
-            %select.span3
-              %option Standard
-            .span3.pull-right
-              .btn.btn-large.btn-warning.pull-right Continue
-            
-      .span10.tab-content2.hide
-        will be updated soon
+      %ul.nav.nav-tabs
+        %li.active
+          %a{"data-toggle" => "tab", :href => "#book"} Book a car
+        %li
+          %a{"data-toggle" => "tab", :href => "#manage"} Manage Reservation
+      .tab-content.span9
+        #book.tab-pane.active          
+          .row
+            %label.span5 Location
+            .span4.tright.link= link_to "Airport codes", ""
+          %input(type="text" class="span9" placeholder="Enter Airport, City or zipcode")
+          .row
+            .span9                          
+              .pull-left
+                %input(type="checkbox" class="span1")              
+              .pull-left.return Return at different location
+            .span9(style="margin-top:15px;")
+          .row
+            .span5
+              %label Pick-up date
+            .span4
+              %label Drop-off date
+            .span9
+              .row
+                .span5
+                  %input(type="text" class="date" placeholder="20/12/2013")
+                  %input(type="text" class="time" placeholder="10:00")
+                .span4
+                  %input(type="text" class="date" placeholder="20/12/2013")
+                  %input(type="text" class="time" placeholder="10:00")
+            .span9(style="margin-top:15px;")
+              %label Car type
+            .span9
+              %select.span3
+                %option Standard
+              .span3.pull-right
+                .btn.btn-large.btn-warning.pull-right Continue
+        #manage.tab-pane
+          will be updated soon
 .content
   .container
     %hr(style="margin-top:120px;")
