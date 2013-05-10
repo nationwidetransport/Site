@@ -104,78 +104,144 @@ a:hover{color:#4093F0;text-decoration:none;}
   border:1px solid #999;
   @include border-radius(3px);
   border:1px solid #ccc;
-  margin-top:60px;
+  margin-top:60px;     
+}
+
+//Sign_in Popup
+div.modal-backdrop{
+   background-color:#fff !important;
+}
+
+.tabs{
+ .modal-body{padding:0px;}
+
   ul{
-     li{
-        font-size:15px;
-        font-weight:bold;
-        text-align:center;
-        @include border-radius(0px);
-        border:0px;
-        width:50%;        
-        a, a:hover{
-           background:#eee;
-           color:#999;
-           margin:0px;
-           padding-top:10px;
-           padding-bottom:10px;
-           border-bottom:4px solid #eee;
-        }
-     }
+    li{
+       font-size:15px;
+       font-weight:bold;
+       text-align:center;
+       @include border-radius(0px);
+       border:0px;
+       width:50%;        
+       a, a:hover{
+          background:#eee;
+          color:#999;
+          margin:0px;
+          padding-top:10px;
+          padding-bottom:10px;
+          border-bottom:4px solid #eee;
+       }
+    }
 
-     .active > a, .active > a:hover{
-        @include border-radius(0px);
-        background:#fff;
-        border-top:5px solid #ED7B35;
-        
-     }
+    .active > a, .active > a:hover{
+       @include border-radius(0px);
+       background:#fff;
+       border-top:5px solid #ED7B35;       
+    }
   }
-   
-   .tab-content{
-      padding-left:7px;
-      overflow:visible;
-      label{
+
+  .tab-content{
+     padding-left:7px;
+     overflow:visible;
+     label{
+        text-transform:uppercase;
+        font-size:12px;
+     }
+
+     .return{
+        font-size:14px;
+        color:#666;
+        padding-top:5px;
+        margin-left:5px;
+     }
+     
+     input[type="text"], input[type="checkbox"], select{
+        background-color:#F9F9F9;
+        padding:10px;
+        height:25px;
+        margin-top:0px;
+     }
+
+     select{
+        height:50px;
+     }
+
+     .date{
+        width:40%;
+        float:left;
+     }
+     
+     .time{
+        width:30%;
+        margin-left:5%;
+        float:left;
+     }
+
+     .btn-large{
+        padding:15px;
+     }
+   }
+}
+
+input:focus{
+   outline:none;
+}
+
+#sign_in{
+   input[type="text"], input[type="password"]{
+      border-left:none;
+      @include border-radius(0px 5px 5px 0px);
+      float:left;
+      font-size:17px;
+      width:180px;
+      margin-top:20px;
+   }
+
+   .textbox{
+      margin-top:20px;
+      @include border-radius(5px 0px 0px 5px);
+      border:1px solid #ccc;
+      border-right:none;
+      background-color:#F9F9F9;
+      width:10px;
+      height:33px;
+      float:left;
+      font-size:17px;
+      padding:12px 10px 0 10px;
+      margin-left:15px;
+   }
+
+   .outer{
+      margin-top:64px;
+      .facebook, .twitter{
          text-transform:uppercase;
-         font-size:12px;
+         font-weight:bold;
+         text-align:center;
+         padding:10px 0;
+         font-size:13px;
+         a{
+            color:#fff;
+            display:block;            
+         }
       }
 
-      .return{
-         font-size:14px;
-         color:#666;
-         padding-top:5px;
-         margin-left:5px;
+      .facebook{
+         @include border-radius(6px 6px 0px 0px);
+         @include gradient-vertical(#39619E, #2A4E8A);
+         border:1px solid #324E7E;
+         border-bottom:none;
+         margin-top:15px;
+         a{text-shadow:2px 2px #000;}
       }
 
-      input[type="text"], input[type="checkbox"], select{
-         background-color:#F9F9F9;
-         padding:10px;
-         height:25px;
-         margin-top:0px;
-      }
-
-      select{
-         height:50px;
-      }
-
-      .date{
-         width:40%;
-         float:left;
+      .twitter{
+         @include border-radius(0px 0px 6px 6px);
+         @include gradient-vertical(#37DCEF, #27D6E7);
+         border:1px solid #49B5C5;
+         border-top:none;
+         a{text-shadow:2px 2px #666;}
       }
       
-      .time{
-         width:30%;
-         margin-left:5%;
-         float:left;
-      }
-
-      .btn-large{
-         padding:15px;
-      }
-   }
-   .tab-content2{
-      margin-top:20px;
-      padding-left:7px;
-      text-align:center;
    }
 }
 
