@@ -1,0 +1,53 @@
+-# Sign_in Popup
+#sign_in.modal.hide.fade.tabs(style="width:300px; height:400px; margin: -250px 0 0 -140px;"){"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  %ul.nav.nav-tabs
+    %li.active
+      %a{"data-toggle" => "tab", :href => "#sign"}Sign in
+    %li
+      %a{"data-toggle" => "tab", :href => "#register"}Register
+  .tab-content
+    #sign.tab-pane.active
+      .textbox
+        .icon-envelope
+      %input(type="text" placeholder="Email")
+      .clear
+      .textbox
+        .icon-lock
+      %input(type="text" placeholder="password") 
+      .clear
+      .return
+        %input(type="checkbox" class="span1" style="margin-left:10px;")
+        Remember me next time      
+      .btn.btn-large.btn-warning.continue
+        Continue
+        .icon-caret-right 
+      .clear
+      .tcenter(style="margin:10px 0; font-size:14px")= link_to "Forgot password ?", "#", {"data-dismiss" => "modal", "data-toggle" => "modal", :href => "#forgot_pass"}
+      .outer
+        = image_tag('or.png')
+        .facebook
+          = link_to "connect with facebook", "#"
+        .twitter
+          = link_to "connect with twitter", "#"
+    #register.tab-pane
+      will be updated soon
+
+-# Sign_in Popup
+#forgot_pass.modal.hide.fade.tabs(style="width:300px; height:330px; margin: -250px 0 0 -140px;"){"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  %ul.nav.nav-tabs
+    %li.active(style="width:100%; border-bottom:1px #ccc solid;")
+      %a{"data-toggle" => "tab", :href => "#fpass"}Forgot Password
+  .tab-content
+    #fpass
+      .textbox
+        .icon-envelope
+      %input(type="text" placeholder="Email")
+      .clear     
+      .return(style="margin-left:15px;")
+        We will send you the password in few minutes
+      .btn.btn-large.btn-warning.continue
+        Continue
+        .icon-caret-right
+      .clear
+      .tcenter(style="margin:10px 0; font-size:14px")= link_to "Sign In", "#", {"data-dismiss" => "modal", "data-toggle" => "modal", :href => "#sign_in"}
+

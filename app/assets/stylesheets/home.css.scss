@@ -180,6 +180,18 @@ div.modal-backdrop{
      .btn-large{
         padding:15px;
      }
+
+     .continue{
+        margin-left:15px;
+        margin-top:25px;
+        width:220px;
+        font-size:16px;
+        font-weight:bold;
+        text-transform:uppercase;
+        .icon-caret-right{
+           margin-left:10px;          
+        }
+     }
    }
 }
 
@@ -193,7 +205,7 @@ input:focus{
       @include border-radius(0px 5px 5px 0px);
       float:left;
       font-size:17px;
-      width:180px;
+      width:200px;
       margin-top:20px;
    }
 
@@ -245,6 +257,32 @@ input:focus{
    }
 }
 
+#forgot_pass{   
+   background-color:#f9f9f9;   
+   input[type="text"], input[type="password"]{
+      border-left:none;
+      @include border-radius(0px 5px 5px 0px);
+      float:left;
+      font-size:17px;
+      width:200px;
+      margin-top:20px;
+      background-color:#fff !important;
+   }
+
+   .textbox{
+      margin-top:20px;
+      @include border-radius(5px 0px 0px 5px);
+      border:1px solid #ccc;
+      border-right:none;
+      background-color:#fff;
+      width:10px;
+      height:33px;
+      float:left;
+      font-size:17px;
+      padding:12px 10px 0 10px;
+      margin-left:15px;
+   }
+}
 
 .content{
    hr{

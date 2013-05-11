@@ -9,36 +9,5 @@
     = render partial: "layouts/header"
     = yield
     = render partial: "layouts/footer"
+    = render partial: "layouts/popup"
 
--# Sign_in Popup
-#sign_in.modal.hide.fade.tabs(style="width:300px; height:400px; margin: -250px 0 0 -140px;"){"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
-  %ul.nav.nav-tabs
-    %li.active
-      %a{"data-toggle" => "tab", :href => "#sign"}Sign in
-    %li
-      %a{"data-toggle" => "tab", :href => "#register"}Register
-  .tab-content
-    #sign.tab-pane.active
-      .textbox
-        .icon-envelope
-      %input(type="text" placeholder="Email")
-      .clear
-      .textbox
-        .icon-lock
-      %input(type="text" placeholder="password") 
-      .clear
-      .return
-        %input(type="checkbox" class="span1" style="margin-left:10px;")
-        Remember me next time      
-      .btn.btn-large.btn-warning(style="margin-left:15px; width: 200px; margin-top:25px;")
-        Continue
-      .clear
-      .tcenter(style="margin:10px 0; font-size:14px")= link_to "Forgot password ?", "#" 
-    .outer
-      = image_tag('or.png')
-      .facebook
-        = link_to "connect with facebook", "#"
-      .twitter
-        = link_to "connect with twitter", "#"
-    #register.tab-pane
-      will be updated soon
