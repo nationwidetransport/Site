@@ -155,7 +155,7 @@ div.modal-backdrop{
         margin-left:5px;
      }
      
-     input[type="text"], input[type="checkbox"], select{
+     input, select{
         background-color:#F9F9F9;
         padding:10px;
         height:25px;
@@ -200,7 +200,7 @@ input:focus{
 }
 
 #sign_in{
-   input[type="text"], input[type="password"]{
+   input[type="email"], input[type="password"]{
       border-left:none;
       @include border-radius(0px 5px 5px 0px);
       float:left;
@@ -259,7 +259,7 @@ input:focus{
 
 #forgot_pass{   
    background-color:#f9f9f9;   
-   input[type="text"], input[type="password"]{
+   input[type="email"]{
       border-left:none;
       @include border-radius(0px 5px 5px 0px);
       float:left;
