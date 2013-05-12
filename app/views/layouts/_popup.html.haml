@@ -26,9 +26,9 @@
       .outer
         = image_tag('or.png')
         .facebook
-          = link_to "connect with facebook", "#"
+          = link_to "connect with facebook", user_omniauth_authorize_path(:facebook)
         .twitter
-          = link_to "connect with twitter", "#"
+          = link_to "connect with twitter", user_omniauth_authorize_path(:twitter)
     #register.tab-pane
       will be updated soon
 
