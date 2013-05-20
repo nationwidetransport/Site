@@ -32,7 +32,7 @@ a:hover{color:#4093F0;text-decoration:none;}
 
 // header styles
 .header{
-   background-color:#fff;  
+   background-color:#fff;
    height:50px;
    padding:20px 0;
    border-bottom:2px solid #919191;
@@ -184,10 +184,11 @@ div.modal-backdrop{
      .continue{
         margin-left:15px;
         margin-top:25px;
-        width:220px;
+        width:250px;
         font-size:16px;
         font-weight:bold;
         text-transform:uppercase;
+        height:50px;
         .icon-caret-right{
            margin-left:10px;          
         }

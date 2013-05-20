@@ -7,21 +7,21 @@
       %a{"data-toggle" => "tab", :href => "#register"}Register
   .tab-content
     #sign.tab-pane.active
-      .textbox
-        .icon-envelope
-      %input(type="email" placeholder="Email")
-      .clear
-      .textbox
-        .icon-lock
-      %input(type="password" placeholder="password") 
-      .clear
-      .return
-        %input(type="checkbox" class="span1" style="margin-left:10px;")
-        Remember me next time      
-      .btn.btn-large.btn-warning.continue
-        Continue
-        .icon-caret-right 
-      .clear
+      = form_for @user, url: new_user_session_path do |f|
+        .textbox
+          .icon-envelope
+        = f.email_field :email, :placeholder => "Email"
+        .clear
+        .textbox
+          .icon-lock
+        = f.password_field :password, :placeholder => "password"
+        .clear
+        .return
+          %input(type="checkbox" class="span1" style="margin-left:10px;")
+          Remember me next time        
+        = f.submit :continue, class: "btn btn-large btn-warning continue"
+        .icon-caret
+        .clear
       .tcenter(style="margin:10px 0; font-size:14px")= link_to "Forgot password ?", "#", {"data-dismiss" => "modal", "data-toggle" => "modal", :href => "#forgot_pass"}
       .outer
         = image_tag('or.png')
