@@ -35,10 +35,9 @@ a:hover{color:#4093F0;text-decoration:none;}
    margin-top:15px;
    margin-bottom:15px;
    height:20px;
-   font-size:15px;
+   font-size:13px;
    a{
       color:#8D929B;
-      font-weight:bolder;
    }
    
    .active{
@@ -65,17 +64,16 @@ a:hover{color:#4093F0;text-decoration:none;}
    margin-top:10px;
    margin-bottom:10px;
    height:30px;
-   font-size:15px;
+   font-size:13px;
    a{
-      color:#fff;
-      font-weight:bold;
+      color:#fff;     
    }
 
    .nbtn{
       background-color:#7A7D87;
       color:#fff;
       padding:5px 10px;
-      min-width:40px;
+      min-width:35px;
       @include border-radius(4px);
       margin-left:10px;
    }
@@ -87,18 +85,83 @@ a:hover{color:#4093F0;text-decoration:none;}
 
 // Banner styles
 .banner{
-   background: #B6B6B6 url('banner.png') no-repeat;
-   height:400px;
-}
+   @include gradient-vertical(#3991F3, #2466B2);
+   height:320px;
 
-// Booking style inside banner
-.booking{
-  background-color:#fff;
-  height:400px;
-  border:1px solid #999;
-  @include border-radius(3px);
-  border:1px solid #ccc;
-  margin-top:60px;     
+   .image{
+      margin-top:40px;
+      @include size(400px, 500px);
+   }
+
+   // Booking style inside banner
+   .booking{
+      background-color:#fff;
+      height:360px;
+      border:1px solid #999;
+      @include border-radius(3px);
+      border:1px solid #ccc;
+      margin-top:40px;    
+      padding:15px 40px 15px 20px;
+      .title{
+         color:#246BB9;
+         font-size:16px;
+         font-weight:bolder;
+         margin-top:10px;
+      }
+      .sub-title{
+         color:#ccc;
+         font-size:11px;
+         margin-top:5px;
+         margin-bottom:6px;
+      }
+
+      label{
+         text-transform:uppercase;
+         font-size:12px;
+         color:#333;
+      }
+
+      input, select{
+         background-color:#F9F9F9;
+         padding:5px 10px;
+         height:22px;
+         margin-top:0px;
+      }
+
+      select{
+         height:35px;
+         margin:8px 0px;
+      }
+
+      .icon{
+         float:left;
+         margin-top:30px;
+      }
+      
+      .icon1{
+         float:left;
+         margin-top:15px;
+      }      
+
+     .continue{
+        @include gradient-vertical(#3E97FB, #256AB7);
+        color:#fff;
+        padding:13px 10px;
+        @include border-radius(4px);
+
+        width:100px;
+        font-size:14px;
+        font-weight:bold;
+        text-transform:uppercase;
+        text-align:center;
+        height:20px;
+        margin-top:7px;
+        .icon-caret-right{
+           color:#fff;
+           margin-left:10px;          
+        }
+     }
+   }
 }
 
 //Sign_in Popup

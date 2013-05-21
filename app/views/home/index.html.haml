@@ -1,48 +1,43 @@
-.banner
+.banner 
   .container
-    .booking.pull-right.span10.tabs
-      %ul.nav.nav-tabs
-        %li.active
-          %a{"data-toggle" => "tab", :href => "#book"} Book a car
-        %li
-          %a{"data-toggle" => "tab", :href => "#manage"} Manage Reservation
-      .tab-content.span9
-        #book.tab-pane.active          
-          .row
-            %label.span5 Location
-            .span4.tright.link= link_to "Airport codes", ""
-          %input(type="text" class="span9" placeholder="Enter Airport, City or zipcode")
-          .row
-            .span9                          
-              .pull-left
-                %input(type="checkbox" class="span1")              
-              .pull-left.return Return at different location
-            .span9(style="margin-top:15px;")
-          .row
-            .span5
-              %label Pick-up date
-            .span4
-              %label Drop-off date
-            .span9
-              .row
-                .span5
-                  %input(type="text" class="date" placeholder="20/12/2013")
-                  %input(type="text" class="time" placeholder="10:00")
-                .span4
-                  %input(type="text" class="date" placeholder="20/12/2013")
-                  %input(type="text" class="time" placeholder="10:00")
-            .span9(style="margin-top:15px;")
-              %label Car type
-            .span9
-              %select.span3
-                %option Standard
-              .span3.pull-right
-                .btn.btn-large.btn-warning.pull-right Continue
-        #manage.tab-pane
-          will be updated soon
+    .image.span10= image_tag('banner.png')
+    .booking.pull-right.span9
+      .span9.title Get An Instant Quote        
+      .span9.sub-title No personal information required to see your car shipping price quote
+      .span9
+        .icon= image_tag('icon-ballon-a.png')
+        .span8
+          %label ship car from
+          %input(type="text" class="span8" placeholder="Zip-OR- City, State")
+      .span9
+        .icon= image_tag('icon-ballon-b.png')
+        .span8
+          %label ship car to
+          %input(type="text" class="span8" placeholder="Zip-OR- City, State")
+      .span9
+        .icon1= image_tag('icon-car.png')          
+        .span4
+          %select.span4
+            %option Select Make
+        .span4
+          %select.span4
+            %option Select Model
+      .span9
+        .icon1= image_tag('icon-circle-i.png')
+        .span4
+          %select.span4
+            %option Car conditior      
+        .span4
+          %select.span4
+            %option Transport type
+
+      .span9
+        .continue.pull-right 
+          Continue
+          .icon-caret
 .content
   .container
-    %hr(style="margin-top:120px;")
+    %hr(style="margin-top:150px;")
     .title1 We are the leading car agency with 300,000 Happy Customers.
     .text1
       Morbi orci ante, consectetur id vestibulum quis, suscipit eu eros. Duis non egestas dolor. Duis non volutpat leo. Aliquam nisi eros, accumsan 

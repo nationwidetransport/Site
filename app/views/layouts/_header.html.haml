@@ -2,7 +2,7 @@
 .header
   .container
     .row
-      .span5= image_tag('logo.png')
+      .span6= image_tag('logo.png')
       .span14.menu
         %ul
           %a.active(href="")
@@ -13,7 +13,7 @@
             %li About
           %a(href="")
             %li Contact us
-      .span5.menu1
+      .span4.menu1
         - if current_user
           = current_user.email          
           = link_to "logout", destroy_user_session_path, {style: "color:#000;", method: "delete"}
