@@ -42,39 +42,37 @@
     .text1
       Morbi orci ante, consectetur id vestibulum quis, suscipit eu eros. Duis non egestas dolor. Duis non volutpat leo. Aliquam nisi eros, accumsan 
       %br
-      %br
       non gravida vitae, ultricces eu eros. phasellus sagittis mattis tristique
     .learn  
-      .icon-circle-arrow-right
+      = image_tag('icon-arrow-right.png')
       Learn More
     %hr
     .row
       .span7
         .title2
-          .icon-cog
+          = image_tag('icon-ring.png')
           Dedicatted customer support
         .text2
           Praesent tempus egestas blandit. Nunc euismod volutpat ultrices. Nam fermentum nibh eget mi vehicula dictum.
       .span7.offset1
         .title2
-          .icon-tag
+          = image_tag('icon-tag.png')
           Special low rates on car booking
         .text2
           Nunc ut nibh, id dapibus quam. mauris id est at diam rutrum ultricies. Vivamus et dolor valit. Nam congue blandit nulla sed tincidunt.
       .span7.offset1
         .title2
-          .icon-edit
+          = image_tag('icon-edit.png')
           Manage your booking online
         .text2
           Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et malesuada fames ac turpis egestas
     %hr
     
     .home_sign_up
-      .span10
+      .span9
         .text Signup for our email to celebrate great specials
-      .span5
-        %input(type="text" placeholder="Name")
-      .span5
-        %input(type="email" placeholder="Email")
-      .span3
-        .btn.btn-large.btn-warning SIGN UP        
+      .span11
+        %input(type="text" placeholder="Name" class="span5")
+        %input(type="email" placeholder="Email" class="span5")
+      .span2
+        %input(type="submit" value="Sign up")
