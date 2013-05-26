@@ -7,7 +7,7 @@
       %a{"data-toggle" => "tab", :href => "#register"}Register
   .tab-content
     #sign.tab-pane.active
-      = form_for @user, url: new_user_session_path do |f|
+      = form_for :user, url: new_user_session_path do |f|
         .textbox
           .icon-envelope
         = f.email_field :email, :placeholder => "Email"
