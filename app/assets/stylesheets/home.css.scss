@@ -7,6 +7,9 @@ body{
    background-image:url('body_bg.jpg')
 }
 
+//Css variable
+$color: rgb(36, 107, 185);
+
 // Default link color
 a{ color:#4093F0;text-decoration:none;}
 a:hover{color:#4093F0;text-decoration:none;}
@@ -142,25 +145,27 @@ a:hover{color:#4093F0;text-decoration:none;}
          float:left;
          margin-top:15px;
       }      
+   }
+}
 
-     .continue{
-        height:20px;
-        width:100px;
-        padding:13px 10px;
-        margin-top:7px;
-        font-size:14px;
-        font-weight:bold;
-        color:#fff;
-        text-transform:uppercase;
-        text-align:center;
-        @include gradient-vertical(#3E97FB, #256AB7);
-        @include border-radius(4px);
 
-        .icon-caret-right{
-           color:#fff;
-           margin-left:10px;          
-        }
-     }
+.continue{
+   height:20px;
+   width:100px;
+   padding:13px 10px;
+   border:0px;
+   margin-top:7px;
+   font-size:14px;
+   font-weight:bold;
+   color:#fff;
+   text-transform:uppercase;
+   text-align:center;
+   @include gradient-vertical(#3E97FB, #256AB7);
+   @include border-radius(4px);
+   
+   .icon-caret-right{
+      color:#fff;
+      margin-left:10px;          
    }
 }
 
@@ -193,7 +198,7 @@ div.modal-backdrop{
     .active > a, .active > a:hover{
        @include border-radius(0px);
        background:#fff;
-       border-top:5px solid #ED7B35;       
+       border-top:5px solid $color;       
     }
   }
 
@@ -227,7 +232,7 @@ div.modal-backdrop{
         width:40%;
         float:left;
      }
-     
+     -204px
      .time{
         width:30%;
         margin-left:5%;

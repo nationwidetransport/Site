@@ -1,5 +1,5 @@
 -# Sign_in Popup
-#sign_in.modal.hide.fade.tabs(style="width:300px; height:400px; margin: -250px 0 0 -140px;"){"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+#sign_in.modal.hide.fade.tabs(style="width:300px; height:400px; margin: -10px 0 0 -140px;"){"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
   %ul.nav.nav-tabs
     %li.active
       %a{"data-toggle" => "tab", :href => "#sign"}Sign in
@@ -19,7 +19,7 @@
         .return
           %input(type="checkbox" class="span1" style="margin-left:10px;")
           Remember me next time        
-        = f.submit :continue, class: "btn btn-large btn-warning continue"
+        = f.submit :continue, class: "continue"
         .icon-caret
         .clear
       .tcenter(style="margin:10px 0; font-size:14px")= link_to "Forgot password ?", "#", {"data-dismiss" => "modal", "data-toggle" => "modal", :href => "#forgot_pass"}
@@ -33,7 +33,7 @@
       will be updated soon
 
 -# Sign_in Popup
-#forgot_pass.modal.hide.fade.tabs(style="width:300px; height:330px; margin: -250px 0 0 -140px;"){"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+#forgot_pass.modal.hide.fade.tabs(style="width:300px; height:330px; margin: -10px 0 0 -140px;"){"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
   %ul.nav.nav-tabs
     %li.active(style="width:100%; border-bottom:1px #ccc solid;")
       %a{"data-toggle" => "tab", :href => "#fpass"}Forgot Password
@@ -45,9 +45,7 @@
       .clear     
       .return(style="margin-left:15px;")
         We will send you the password in few minutes
-      .btn.btn-large.btn-warning.continue
-        Continue
-        .icon-caret-right
+      %input.continue(type="submit" value="Continue")
       .clear
       .tcenter(style="margin:10px 0; font-size:14px")= link_to "Sign In", "#", {"data-dismiss" => "modal", "data-toggle" => "modal", :href => "#sign_in"}
 
