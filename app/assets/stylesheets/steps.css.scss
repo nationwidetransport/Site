@@ -2,11 +2,53 @@
 .steps
 {
    border-bottom:2px solid #ccc;
+   background-image:url("step_bg.jpg");
+
    ul{
+      margin-bottom:0px;
       li{
          list-style:none;
          display:inline;
-         text-align:center;
+         font-size:16px;
+         width:25%;
+         float:left;
+         [class^='icon-']{
+            font-size:50px;
+            font-weight:100;
+         }
+         .border{
+            border-left:1px solid #ccc;         
+            height:50px;
+            padding:15px 0 15px 20px; 
+            .text{
+               margin:15px 0 0 10px;  
+               float:left;
+            }
+            i{
+               background:url("step_icon.png");
+               @include size(45px, 44px);
+               float:left;
+            }
+            .step-1{background-position:-2px 47px;}
+            .step-2{background-position:-47px 47px;}
+            .step-3{background-position:-91px 47px;}
+            .step-4{background-position:-134px 47px;}
+            .step-ok{background-position:47px 47px;}
+         }
+      }
+      li:last-child {
+         .border{
+            border-right:1px solid #ccc;
+         }
+      }  
+      .active{
+         @include gradient-vertical(#3C98FD, #286FBD);
+         color:#fff;
+         .step-1{background-position:-2px 97px !important;}
+         .step-2{background-position:-47px 97px !important;}
+         .step-3{background-position:-91px 97px !important;}
+         .step-4{background-position:-134px 97px !important;}
+         .step-ok{background-position:47px 97px !important;}
       }
    }
 }
