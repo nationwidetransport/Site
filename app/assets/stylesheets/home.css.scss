@@ -232,7 +232,7 @@ div.modal-backdrop{
         width:40%;
         float:left;
      }
-     -204px
+
      .time{
         width:30%;
         margin-left:5%;
@@ -502,10 +502,13 @@ input:focus{
       height:50px;
       padding:10px 0;
       .copywrite{
-         color:#C8C8C8;
+         color:#999;
          text-align:right;
          padding-top:20px;
          font-size:13px;
+      }
+      img{
+         opacity:0.8;
       }
    }
 }
