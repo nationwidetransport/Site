@@ -2,9 +2,12 @@ Nationwide::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   root :to => 'home#index'
-  match '/step1' => 'home#step1'
 
-  match '/check' => 'home#check'
+  match '/step1' => 'home#step1'
+  match '/step2' => 'home#step2'
+  match '/step3' => 'home#step3'
+  match '/step4' => 'home#step4'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

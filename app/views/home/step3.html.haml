@@ -1,0 +1,159 @@
+.steps
+  .container
+    %ul
+      %li
+        .border          
+          %i.step-ok
+          .text Get Quote
+      %li
+        .border
+          %i.step-ok
+          .text Pick Up & Drop Off
+      %li.active
+        .border
+          %i.step-3
+          .text Payment Info
+      %li
+        .border
+          %i.step-4
+          .text Payment Receive
+.container
+  .row
+    .panel.span7
+      .pull-left= image_tag('review_star.png')
+      .review        
+        Reviews and Guarantees
+      .clear
+      .title Customers reviews
+      %b Allen Malkoc
+      .comments       
+        I own a local moving company in Austin, TX,
+        in the past I have used several auto transport
+        companies to transport clients cars across
+        the states. I found Montway While...
+        .link= link_to "Read more", "#"
+
+      .title Help
+      %br
+      .pull-left= image_tag('help_question_mark.png')
+      .help
+        Got Questions ?
+        .link= link_to "Click for answers", "#"
+      .clear
+
+      .pull-left= image_tag('help_phone.png')
+      .help
+        Call For Assistance
+        %br
+        %b 856-834-8878
+
+      .clear
+      .title Gaurantees
+      = image_tag('gaurantees.png')
+      .clear
+      
+    .panel.span15.pull-right
+      .payment_info
+        = image_tag('payment_info_icon.png')
+        Payment Info
+      .title
+        Order details
+      %table.tleft.cap        
+        %tr
+          %th.span4 Order ID
+          %td.span10 #5555
+        %tr
+          %th Customer Name
+          %td Allen Malkoc
+        %tr
+          %th Email Id
+          %td allen.malkoc@zimamail.com
+        %tr
+          %th Pickup From
+          %td Chicago, IL 60645
+        %tr
+          %th Deliver To
+          %td Beverly Hills, CA 90210
+        %tr
+          %th Status
+          %td New Order
+        %tr
+          %th Car
+          %td 2012 Acura CL
+        %tr
+          %th Transport type
+          %td Open
+        %tr
+          %th Car condition
+          %td Running
+
+      .title Payment Details
+      %br
+      .discount_btn
+        Discounted cash price
+      .link.pull-left
+        = link_to "Regular Price"
+      .clear
+      %br
+      .payment_detail
+        .span4.text Balance
+        .span7
+          .arrow
+            Due to truck at delivery
+            = image_tag('help_question_mark.png')
+        .span3.price $ 819.00
+        .clear
+      .payment_detail
+        .span4.text Partial Payment
+        .span7
+          .arrow
+            Amount charged now
+            = image_tag('help_question_mark.png')
+        .span3.price $ 817.00
+        .clear
+      .total
+        .span4 Total
+        .span10.tright $ 817.00
+      .title Terms & conditions
+      
+      %textarea.tarea
+        Renty Auto Transport is a registered and bonded property broker (MC#611862) and a licensed carrier (MC#615110) with U.S. Department of Transportation. This agreement between the customer, (hereinafter referred to as "Customer"), and Montway Auto Transport allows Montway Inc to contract with another licensed and insured Motor Carrier(s) to transport the vehicle(s) described in this shipping order.
+
+        Cancellation & Refund policy
+      .tcenter(style="margin-bottom:30px;")
+        %input(type="checkbox" class="span1 checkbox")I agree to the
+        %span.link
+          = link_to "Terms & conditions", ""
+
+      .title Payment Information
+      .payment
+        .span9
+          %label Card type
+          .pull-left(style="margin:10px;")= image_tag('visa_icon.png')
+        .span5
+          .pull-right= image_tag('money_back.png')
+        .span5
+          %label card number
+          %input(type="text" placeholder="xxxx-xxxx-xxxx-xxxx" class="span5")
+        .span4.offset1
+          .row
+            %label Expiration date
+            = select_tag :month, options_for_select((1..12)), class: "span2"        
+            = select_tag :year, options_for_select((2013..2030)), class: "span2", style: "margin-left:10px;"      
+        .span2
+          %label CVV
+          %input(type="text" placeholder="xxx" class="span2")
+
+        .span5
+          %label Name on card
+          %input(type="text" placeholder="First name" class="span5")
+        .span5.offset1
+          .row
+            %label
+            %input(type="text" placeholder="Last name" class="span5")
+        .span15
+          %b Note
+          \: By placing your order, you agree to Renty Auto Transport's Terms & Conditions
+  .order_btn.pull-right 
+    Place my order
+    .icon-circle-arrow-right

@@ -6,6 +6,7 @@
 
    ul{
       margin-bottom:0px;
+      margin-left:0px;
       li{
          list-style:none;
          display:inline;
@@ -50,5 +51,178 @@
          .step-4{background-position:-134px 97px !important;}
          .step-ok{background-position:47px 97px !important;}
       }
+   }
+}
+
+.panel{
+   margin-top:30px;
+   background:#f9f9f9;
+   min-height:400px;
+   @include border-radius(5px);
+   padding:18px;
+   border:1px solid #bbb;
+   @include box-shadow(0 0 8px #ccc);
+   .review{
+      color:#434B56;
+      font-size:15px;
+      float:left;
+      margin-left:5px;
+   }
+   .title{
+      background-color:#eee;
+      padding: 5px 20px;
+      margin: 10px -18px;
+      text-transform:uppercase;
+      font-size:11px;
+   }
+   
+   .comments, .comments a{
+      font-size:12px;  
+      margin-bottom:20px;
+   }
+
+   .help{
+      font-size:17px;
+      float:left;
+      margin-left:10px;
+      margin-bottom:20px;
+   }
+
+   .payment_info{
+      background-color:#fff;
+      height:30px;
+      padding: 15px 20px 6px;
+      margin:-18px;
+      color:$color;
+      font-size: 16px;
+      font-weight: bold;
+      img{
+         margin:-2px 8px 0 0;
+      }
+   }
+
+   table{
+      margin:10px 0 20px 10px;
+      td{
+         height:30px;
+      }
+   }
+
+   .discount_btn{
+      background-color:#7B7F88;
+      padding:3px 10px;
+      @include border-radius(5px);
+      color:#fff;
+      width:121px;
+      float:left;
+      margin:0px 20px 0
+   }
+   .payment_detail{
+      margin-top:15px;
+      .text{
+         font-size:18px;
+         text-align:left;
+      }
+      .arrow{
+         border-top:1px solid #ccc;
+         border-bottom:1px solid #ccc;
+         border-left:1px solid #ccc;
+         background:#fff;  
+         float:right;
+         font-size:11px;
+         padding:0 9px 0;
+         width:140px;
+         text-align:right;
+         position: relative;
+         @include border-radius(3px 0 0 3px);
+         img{
+            @include size(13px, 13px);
+            margin:0 3px 2px;
+         }
+      }
+
+      .arrow:after {
+         content: '';
+         display: block;
+         position: absolute;
+         top: 2px;
+         right:-7px;
+         width: 15px;
+         height: 15px; 
+         background: #FFFFFF;
+         border-right:1px solid #ccc;
+         border-bottom:1px solid #ccc;
+         -moz-transform:rotate(-45deg);
+         -webkit-transform:rotate(-45deg);
+      }
+
+
+      .price{
+         font-size:18px;
+         text-align:right;
+         color:#434B56;
+      }
+   }
+
+   .total{
+      background:#434B56;
+      padding: 12px 20px;
+      margin: 30px -18px 0;
+      height:20px;
+      color:#fff;
+      text-transform:uppercase;
+      font-size:18px;
+   }
+
+   .tarea{
+      @include size(120px, 570px);
+      margin:20px 0 20px 0;
+   }
+
+   .payment{
+      label{
+         text-transform:uppercase;
+         font-size:11px;
+         height:20px;
+      }
+
+      input[type=text]{
+         padding:10px;
+         background-color:#F9F9F9;
+      }
+
+      select{
+         padding:5px;
+         height:42px;
+      }
+   }
+
+   .gutter{
+      margin-left:20px;
+   }
+
+   .checkbox{
+      @include square(20px);
+      margin:-1px 10px;
+      background:#fff !important;
+   }
+}
+
+.order_btn{
+   margin-top:30px;
+   height:20px;
+   width:160px;
+   padding:13px 10px;
+   border:0px;
+   font-size:14px;
+   font-weight:bold;
+   color:#fff;
+   text-transform:uppercase;
+   text-align:center;
+   @include gradient-vertical(#3E97FB, #256AB7);
+   @include border-radius(4px);
+   
+   [class^="icon-"]{
+      margin-left:10px;
    }
 }
