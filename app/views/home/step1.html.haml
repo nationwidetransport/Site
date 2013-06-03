@@ -1,0 +1,74 @@
+= render partial: "steps_menu"  
+.container
+  .row
+    = render partial: "steps_side_panel"  
+    .panel.span15.pull-right
+      .panel_title
+        = image_tag('payment_info_icon.png')
+        Order Info
+      %table.tleft.cap(style="margin-top:30px;")
+        %tr
+          %th.span4 Shipping From
+          %td.span10 Chicago, IL 60645
+        %tr
+          %th Shipping To
+          %td Thu, 21 Mar, 2013 at 10:00
+        %tr
+          %th Type of Vehicle
+          %td Acura RLX
+        %tr
+          %th Operating Condition
+          %td Running, Rolls, Steers, and Brakes
+        %tr
+          %th Type of Trailer
+          %td Open
+        %tr
+          %th Type of Service
+          %td Door-to-Door Service*
+        %tr
+          %th Cargo Insurance
+          %td Included*
+
+
+      .title Price
+      %br
+      .span15
+        %b Note: 
+        At checkout you will have one moretime the option to change/select payment method of your choice!
+      .clear
+      %br
+      .payment_detail
+        .span10.text 
+          = radio_button_tag 'price', 'pick'
+          Pick and Return Location
+        .span3.price $ 819.00
+        .clear
+      .payment_detail
+        .span10.text 
+          = radio_button_tag 'price', 'normal'
+          Regular Price
+        .span3.price $ 817.00
+        .clear
+      %br
+      .title Share
+      
+      %a(href="#")
+        .facebook_btn.span6
+          .icon-facebook  
+          .text
+            Share your rate on Facebook
+      %a(href="#")
+        .email_btn.span6
+          .icon-envelope
+          .text
+            Email Quote
+
+  .order_btn.pull-right 
+    Schedule Your Shipment Online
+    .icon-circle-arrow-right
+
+:javascript
+  $('.payment_detail input[type="radio"]').on('change', function(){
+     $('.payment_detail').removeClass('blue');
+     $(this).closest('.payment_detail').addClass('blue');
+  });

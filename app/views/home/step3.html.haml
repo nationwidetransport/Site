@@ -1,59 +1,9 @@
-.steps
-  .container
-    %ul
-      %li
-        .border          
-          %i.step-ok
-          .text Get Quote
-      %li
-        .border
-          %i.step-ok
-          .text Pick Up & Drop Off
-      %li.active
-        .border
-          %i.step-3
-          .text Payment Info
-      %li
-        .border
-          %i.step-4
-          .text Payment Receive
+= render partial: "steps_menu"  
 .container
   .row
-    .panel.span7
-      .pull-left= image_tag('review_star.png')
-      .review        
-        Reviews and Guarantees
-      .clear
-      .title Customers reviews
-      %b Allen Malkoc
-      .comments       
-        I own a local moving company in Austin, TX,
-        in the past I have used several auto transport
-        companies to transport clients cars across
-        the states. I found Montway While...
-        .link= link_to "Read more", "#"
-
-      .title Help
-      %br
-      .pull-left= image_tag('help_question_mark.png')
-      .help
-        Got Questions ?
-        .link= link_to "Click for answers", "#"
-      .clear
-
-      .pull-left= image_tag('help_phone.png')
-      .help
-        Call For Assistance
-        %br
-        %b 856-834-8878
-
-      .clear
-      .title Gaurantees
-      = image_tag('gaurantees.png')
-      .clear
-      
+    = render partial: "steps_side_panel"  
     .panel.span15.pull-right
-      .payment_info
+      .panel_title
         = image_tag('payment_info_icon.png')
         Payment Info
       .title
