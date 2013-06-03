@@ -1,0 +1,114 @@
+= render partial: "steps_menu"  
+.container
+  .row
+    = render partial: "steps_side_panel"  
+    .panel.span15.pull-right.pick_up_page
+      .panel_title
+        = image_tag('payment_info_icon.png')
+        Pick-Up & Drop Off
+      .title Customer info
+      .span15(style="margin-bottom:10px")
+        .row
+          %b.span3 Customer type
+          .span2
+            = radio_button_tag 'customer_type', 'Private'
+            Private
+          .span2
+            = radio_button_tag 'customer_type', 'Business'
+            Business
+      .span15
+        = label nil, :first_name, class: "required"
+        %input(type="text" class="span9")
+        = label nil, :last_name, class: "required"
+        %input(type="text" class="span9")
+        = label nil, :email, class: "required"
+        %input(type="email" class="span9")
+        = label nil, :phone, class: "required"
+        %input(type="text" class="span9")
+        .link
+          .span4= link_to "Add another phone", "#"
+      .clear
+
+      .title Pickup info
+      .span15(style="margin-bottom:10px")
+        .row
+          %b.span2 Pickup info
+          .span4
+            = check_box 'customer_type', 'Private'
+            Same as customer  
+          .span4
+            %select.span4
+              %option Location type
+      .span15
+        = label nil, :pickup_contact_name, class: "required"
+        %input(type="text" class="span9")
+        = label nil, :pickup_contact_street, class: "required"
+        %input(type="text" class="span9")
+        = label nil, "Apartment, suite, etc"
+        %input(type="text" class="span9")
+        %input(type="text" class="span9" disabled="diabled" style="margin-top:10px; color:#666;" value="LosAngeles, CA 90006")
+        = label nil, :phone, class: "required"
+        %input(type="text" class="span9")
+        .link
+          .span4= link_to "Add another phone", "#"
+      .clear
+
+      .title Dropoff info
+      .span15(style="margin-bottom:10px")
+        .row
+          %b.span2 Pickup info
+          .span4
+            = check_box 'customer_type', 'Private'
+            Same as customer  
+          .span4
+            %select.span4
+              %option Location type
+      .span15
+        = label nil, :pickup_contact_name, class: "required"
+        %input(type="text" class="span9")
+        = label nil, :pickup_contact_street, class: "required"
+        %input(type="text" class="span9")
+        = label nil, "Apartment, suite, etc"
+        %input(type="text" class="span9")
+        %input(type="text" class="span9" disabled="diabled" style="margin-top:10px;" value="LosAngeles, CA 90006")
+        = label nil, :phone, class: "required"
+        %input(type="text" class="span9")
+        .link
+          .span4= link_to "Add another phone", "#"
+      .clear
+
+      .title Vehicle information
+      .span15
+        %table.tleft.cap        
+          %tr
+            %td.span4 YEAR
+            %td.span10 
+              %input(type="text" class="span3")
+          %tr
+            %td Vehicle Make
+            %td Acura
+          %tr
+            %td Vehicle model
+            %td RLX
+          %tr
+            %td Condition
+            %td Running
+          %tr
+            %td Type of Trailer
+            %td Open
+          %tr
+            %th Total Rate
+            %th $649
+      .clear
+      .title Shipping Information
+      .span15
+        = label nil, :pickup_date
+        %input(type="text" class="span9")
+        = label nil, "Comments & Instructions"
+        %textarea(class="span14" rows="4")   
+        
+
+  .order_btn.pull-right
+    Continue
+    .icon-circle-arrow-right
+
