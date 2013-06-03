@@ -1,0 +1,20 @@
+= render partial: "steps_menu"  
+.container
+  .row
+    = render partial: "steps_side_panel"  
+    .panel.span15.pull-right
+      .panel_title
+        = image_tag('payment_info_icon.png')
+        Payment Receive
+      %br
+      .span15
+        .congrats Congrats!        
+        %p
+          Thank you for your payment. Your transaction has been completed, and a receipt for your purchase has been emailed to you. You may log into your account at www.paypal.com/us to view details of this transaction.
+        %p
+          Thank you for your payment. Your transaction has been completed, and a receipt for your purchase has been emailed to you. You may log into your account at www.paypal.com/us to view details of this transaction.
+
+        .order_btn.pull-left.offset4
+          Back to Main Page
+          .icon-circle-arrow-right
+
